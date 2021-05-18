@@ -32,9 +32,9 @@ services:
         - OLS_HOME=/mnt/
         - ols.customisation.debrand=true
         - ols.customisation.logo=/custom/logo.png
-        - ols.customisation.title=OLS Instance
-        - ols.customisation.org=CUSTOM
-        - ols.customisation.short-title=CUSTOM-OLS
+        - ols.customisation.title=Ontology Lookup Service
+        - ols.customisation.org=CCDH
+        - ols.customisation.short-title=CCDH-OLS
       volumes:
         - ./ols-neo4j-data:/mnt/neo4j
         - ./config/ols-config/logo.png:/mnt/web-custom/logo.png

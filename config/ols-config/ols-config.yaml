@@ -1,37 +1,34 @@
 '@context': null
 ontologies:
-
-  - id: cob
-    preferredPrefix: COB
-    title: Core Ontology for Biology and Biomedicine
+  - id: ncit
+    preferredPrefix: NCIT
+    title: NCI Thesaurus OBO Edition
     description: >
-      The Core Ontology for Biology and Biomedicine (COB) brings together key terms from a wide range of OBO projects into a single, small ontology. The goal is to improve interoperabilty and reuse across the OBO community through better coordination of key terms.
-    uri: http://purl.obolibrary.org/obo/cob.owl
+      NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies.
+    uri: http://purl.obolibrary.org/obo/ncit/ncit.owl
     base_uri:
-      - http://purl.obolibrary.org/obo/COB_
+      - http://purl.obolibrary.org/obo/NCIT_
     synonym_property:
       - http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
     definition_property:
       - http://purl.obolibrary.org/obo/IAO_0000115
-#    label_property:  http://www.w3.org/2004/02/skos/core#prefLabel
     reasoner: EL
     oboSlims: false
-    ontology_purl: http://purl.obolibrary.org/obo/cob.owl
+    ontology_purl: http://purl.obolibrary.org/obo/ncit/ncit.owl
     allow_download: false
-  - id: test
-    preferredPrefix: TEST
-    title: Test OLS Load Ontology
+  - id: ncit_plus
+    preferredPrefix: NCIT
+    title: NCI Thesaurus Plus
     description: >
-      Test ontology for the purpose of loading a local file instead of a URL.
-    uri: http://purl.obolibrary.org/foo/bar.owl
+      The NCIt Plus replaces some NCIt terms with direct references to terms from other domain-specific OBO Library ontologies (e.g. cell types, cellular components, anatomy). The current release incorporates CL (cell types) and Uberon (anatomy).
+    uri: http://purl.obolibrary.org/obo/ncit/ncit-plus.owl
     base_uri:
-      - http://purl.obolibrary.org/foo/TEST_
+      - http://purl.obolibrary.org/obo/NCIT_
     synonym_property:
       - http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
     definition_property:
       - http://purl.obolibrary.org/obo/IAO_0000115
-#    label_property:  http://www.w3.org/2004/02/skos/core#prefLabel
     reasoner: EL
     oboSlims: false
-    ontology_purl: file:/mnt/downloads/test.owl
+    ontology_purl: http://purl.obolibrary.org/obo/ncit/ncit-plus.owl
     allow_download: false
