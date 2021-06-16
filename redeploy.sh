@@ -85,7 +85,7 @@ $DOCKERRUN --network "$NETWORK" -v "$OLSCONFIGDIR":/config \
 echo "INFO: OLS - Indexing OLS... ($SECONDS sec)"
 $DOCKERRUN --network "$NETWORK" -v "$OLS_NEO4J_DATA":/mnt/neo4j -v "$OLS_NEO4J_DOWNLOADS":/mnt/downloads \
            -e spring.data.mongodb.host=ols-mongo \
-           -e spring.data.solr.host="$OLS_SOLR" "$EBISPOT_OLSINDEXER"
+           -e spring.data.solr.host="$OLS_SOLR" -e JAVA_OPTS=-Xmx12G -e JAVA_TOOL_OPTIONS=-Xmx12G "$EBISPOT_OLSINDEXER"
 
 # 5. Now, we start the remaining services. It is important that ols-web is not running at indexing time. 
 # This is a shortcoming in the OLS archticture and will likely be solved in future versions
